@@ -1,0 +1,40 @@
+# Context Rot 評価設定
+
+# モデルパス
+model_path: ""
+
+# 最大コンテキスト長
+max_context_length: 4096
+
+# Needle（干し草の中に埋め込む針）
+needle: "今日のラッキーアイテムは「青い定規」です。"
+
+# Needle検出用プロンプト
+retrieval_prompt: "コンテキストに基づき、今日のラッキーアイテムを答えてください。一言で答えてください。"
+
+# テスト設定
+test_config:
+  # テストするコンテキスト長（トークン数）
+  context_lengths: [2000, 4000, 8000]
+  
+  # テストするNeedle位置（0.0=文頭, 1.0=文末）
+  needle_positions: [0.0, 0.25, 0.5, 0.75, 1.0]
+  
+  # LLM推論設定
+  temperature: 0.1
+  max_tokens: 50
+  
+# 出力設定
+output:
+  # 結果フォルダ
+  results_dir: "./results"
+  
+  # 生成するグラフ
+  plots:
+    - heatmap
+    - decay_curve
+  
+  # レポートフォーマット
+  formats:
+    - json
+    - markdown

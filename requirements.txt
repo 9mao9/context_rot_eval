@@ -1,0 +1,21 @@
+# Context Rot 評価スイートの依存パッケージ
+
+# LLM推論エンジン
+# llama-cpp-python>=0.3.16
+
+# 数値計算・統計処理
+numpy>=1.21.0
+scipy>=1.7.0
+
+# グラフィックス・可視化
+matplotlib>=3.4.0
+Pillow>=8.0.0
+
+# YAML設定ファイル処理
+PyYAML>=5.4.0
+
+# ユーティリティ
+tqdm>=4.50.0
+
+# 日本語フォント対応
+japanize-matplotlib>=1.1.0
